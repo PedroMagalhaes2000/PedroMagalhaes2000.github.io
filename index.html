@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site Acessível Pedro Magalhães</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e3e3e3; 
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            padding-top: 60px;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1abc9c; 
+            color: #ffffff;
+            padding: 20px;
+            position: relative;
+            border-bottom: 10px solid #159077; 
+            height: 150px;
+        }
+
+        .header-content h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #0d6956;
+            padding: 12px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 20px;
+            display: inline-block;
+            font-size: 1.2em;
+        }
+
+        nav a:focus, nav a:hover {
+            background-color: #3498db; 
+            border-radius: 5px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #12705d; 
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        button:focus {
+            outline: 3px solid #0b5244;
+        }
+
+        input, select {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+            border: 2px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 12px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .carousel-button-prev {
+            left: 10px;
+        }
+
+        .carousel-button-next {
+            right: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .artists-section {
+            background-color: #ecf0f1;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .artists-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .artist-card {
+            background-color: white;
+            padding: 20px;
+            margin: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .artist-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .hobbies-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .hobbies-section li {
+            padding: 8px 0;
+        }
+
+        .pet-section {
+            background-color: #ecf0f1;
+            padding: 30px;
+            margin-top: 40px;
+            border-radius: 8px;
+        }
+
+        .pet-section h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .pet-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .pet-images img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 5px solid #3498db;
+        }
+
+        a:focus, button:focus, input:focus, select:focus {
+            outline: 3px solid #ff6347;
+            background-color: #ffeb3b; 
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <h1>Quem sou eu?</h1>
+    </div>
+</header>
+
+<nav>
+    <a href="#home" title="Ir para Início">Início</a>
+    <a href="#hobbies" title="Ir para Hobbies">Hobbies</a>
+    <a href="#recipes" title="Ir para Receitas">Receitas</a>
+    <a href="#artists" title="Ir para Artistas">Artistas</a>
+    <a href="#contact" title="Ir para Contatos">Contatos</a>
+    <a href="#pet" title="Ir para Pet">Meu Pet</a>
+   
+</nav>
+
+
+<main>
+
+    <section id="home" class="card">
+        <h2>Início</h2>
+        <p>Olá, o meu nome é Pedro e tenho 24 anos. Sou apaixonado por diversos hobbies que me ajudam a crescer como pessoa. Gosto de cozinhar e explorar novas receitas, de jogar videojogos para me divertir. Além disso, pratico boxe para manter o meu corpo e mente saudáveis.</p>
+        <p>Este site foi criado para partilhar um pouco sobre mim e as minhas paixões, como o meu gosto pela culinária, pelo gaming, pela música e pela prática de boxe.</p>
+    
+        <div class="image-container" style="display: flex; justify-content: center; gap: 20px;">
+            <img src="eu.jpg" alt="Foto de Pedro" title="Foto de Pedro, um jovem de 24 anos." style="width: 200px; height: 200px; border: 5px solid #3498db; border-radius: 12px; object-fit: cover;">
+            <img src="euu.jpg" alt="Foto 2" title="Foto de Pedro, sorrindo e relaxando." style="width: 200px; height: 200px; border: 5px solid #3498db; border-radius: 12px; object-fit: cover;">
+            <img src="cao 3.jpg" alt="Foto 3" title="Foto de Pedro com seu cão Gucci" style="width: 200px; height: 200px; border: 5px solid #3498db; border-radius: 12px; object-fit: cover;">
+        </div>
+    </section>
+    
+
+    <section id="hobbies" class="card hobbies-section">
+        <h2>Hobbies</h2>
+        <ul>
+            <li><strong>Cozinha:</strong> Experimentar novas receitas e aprender sobre diferentes culturas culinárias é uma paixão que me permite criar pratos deliciosos.</li>
+            <li><strong>Gaming:</strong> Jogar videojogos é uma forma divertida de relaxar e também de me desafiar mentalmente, além de ser uma ótima maneira de socializar com amigos.</li>
+            <li><strong>Música:</strong> Ouvir música é uma atividade que proporciona prazer e ajuda no desenvolvimento pessoal e emocional.</li>
+            <li><strong>Boxe:</strong> A prática de boxe é uma excelente forma de manter a saúde, melhorar o condicionamento físico e desenvolver disciplina e autoconfiança.</li>
+        </ul>
+    </section>
+
+    <section id="recipes" class="card">
+        <h2>As minhas Iguarias</h2>
+        <div class="carousel">
+            <button class="carousel-button carousel-button-prev" aria-label="Imagem anterior" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel-images">
+                <img src="lasanha.jpg" alt="Prato de Lasanha" title="Deliciosa lasanha, prato italiano com queijo e molho de carne." />
+                <img src="francesinha.jpg" alt="Francesinha com molho" title="Francesinha, um prato típico de Portugal com carne, queijo e molho picante." />
+                <img src="Arroz-.webp" alt="Arroz de pato" title="Arroz de pato, prato tradicional português com arroz e carne de pato." />
+                <img src="lagareiro.jpg.webp" alt="Polvo á Lagareiro" title="Polvo á Lagareiro, prato com polvo assado e batatas." />
+                <img src="alentejana.jpg" alt="Carne de Porco á alentejana" title="Carne de porco à alentejana, prato tradicional da região do Alentejo." />
+                <img src="marisco.jpg" alt="Arroz de Marisco" title="Arroz de marisco, prato com arroz e diversos frutos do mar." />
+            </div>
+            <button class="carousel-button carousel-button-next" aria-label="Imagem seguinte" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <h3>Veja o vídeo da receita!</h3>
+        <div class="video-container" style="text-align: center; margin-top: 20px;">
+            <video width="100%" height="auto" controls aria-label="Vídeo da receita">
+                <source src="receita-video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+        </div>
+    </section>
+
+    <section id="artists" class="artists-section">
+        <h2>Artistas Mais Ouvidos</h2>
+        <div class="artists-list">
+            <div class="artist-card">
+                <img src="Slow-J.jpg" alt="Foto do artista Slow J" title="Slow J, rapper português, compositor e produtor musical" />
+                <h3>Slow j</h3>
+                <a href="https://open.spotify.com/intl-pt/artist/7crp1tZcefnjT5RuL6WZQ0" target="_blank">Ouvir no Spotify</a>
+            </div>
+            <div class="artist-card">
+                <img src="kendrick.jpg" alt="Foto do artista Kendrick Lamar" title="Kendrick Lamar, rapper americano e compositor." />
+                <h3>Kendrick Lamar</h3>
+                <a href="https://open.spotify.com/intl-pt/artist/2YZyLoL8N0Wb9xBt1NhZWg" target="_blank">Ouvir no Spotify</a>
+            </div>
+            <div class="artist-card">
+                <img src="tyler.webp" alt="Foto do artista Tyler The Creator" title="Tyler The Creator, artista e produtor musical." />
+                <h3>Tyler The Creator</h3>
+                <a href="https://open.spotify.com/intl-pt/artist/4V8LLVI7PbaPR0K2TGSxFF" target="_blank">Ouvir no Spotify</a>
+            </div>
+            <div class="artist-card">
+                <img src="maro.webp" alt="Foto da artista Maro" title="Maro, cantora e compositora portuguesa." />
+                <h3>Maro</h3>
+                <a href="https://open.spotify.com/intl-pt/artist/3NP4jJcW3R6qO6rbtnH0wn" target="_blank">Ouvir no Spotify</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pet" class="pet-section">
+        <h2>Meu Animal de Estimação - Gucci</h2>
+        <p>Este é o meu querido chihuahua, chamado Gucci...</p>
+        <div class="pet-images">
+            <img src="cao 4.jpg" alt="Gucci foto 1, chihuahua claramente perturbado" title="Gucci, o chihuahua, com uma expressão engraçada." />
+            <img src="cao 3.jpg" alt="Gucci foto 2, Eu acariciando o meu cão" title="Eu acariciando o Gucci, meu chihuahua." />
+            <img src="cao 2.jpg" alt="Gucci foto 3, Gucci Fotogénico " title="Gucci, chihuahua, sempre fotogênico." />
+            <img src="cao.jpg" alt="Gucci foto 4, Gucci com as suas roupas de Inverno" title="Gucci com as suas roupas de Inverno." />
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contatos Pessoais</h2>
+        <div class="contact-info">
+            <span>E-mail:</span> pgvm2000@outlook.pt
+        </div>
+        <div class="contact-info">
+            <span>Telefone:</span> 915440775
+        </div>
+        <div class="contact-info">
+            <span>Instagram:</span> @pedro_magalhaes_50
+        </div>
+    </section>
+    
+   
+</main>
+
+<footer>
+    <p>&copy; Pedro iLimitada</p>
+    
+    <img src="Logo-IEFP-Vertical-5.png" alt="Imagem no Rodapé" title="Logo do IEFP" style="max-width: 200px; height: auto; margin-top: 10px;">
+    <img src="logosapoios.jpg" alt="Imagem no Rodapé" title="Logo dos apoios" style="max-width: 500px; height: auto; margin-top: 10px;">
+</footer>
+
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-images img');
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+        } else {
+            currentSlide = 0;
+        }
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+        } else {
+            currentSlide = totalSlides - 1;
+        }
+        updateCarousel();
+    }
+
+    function updateCarousel() {
+        const carousel = document.querySelector('.carousel-images');
+        const offset = -currentSlide * 100;
+        carousel.style.transform = `translateX(${offset}%)`;
+    }
+</script>
+
+</body>
+</html>
